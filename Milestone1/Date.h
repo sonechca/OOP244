@@ -11,7 +11,7 @@
 
 #ifndef AID_DATE_H
 #define AID_DATE_H
-
+#include <iostream>
 namespace aid {
     const int min_year = 2018;
     const int max_year = 2038;
