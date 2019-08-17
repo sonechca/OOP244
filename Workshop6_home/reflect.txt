@@ -1,0 +1,29 @@
+/***********************************************************
+ // OOP244 Workshop 6: Class with a Resource
+ // File: w6_at_home.cpp
+ // Date: July 7, 2019
+ // Author: Hong Huang
+ // Name: Mintae Kim
+ // Reason: Workshop 6 home
+ // Student#: 141915181
+ // E-mail: mkim221@myseneca.ca
+ ***********************************************************/
+
+
+1)	Why does the copy assignment operator check for self-assignment before doing anything else? What could go wrong if the operator doesn't check for 
+self-assignment?
+ - When we used a copy operator, dynamically allocated member variables which will be deallocated are newly allocated. In this case, the existing assigned value 
+is initialized. If the value is not verified when copying itself, the existing value which will copy itself is initialized and the copy is not properly done. 
+
+2)	List examples of how you avoided code duplication.
+ - bool validNum(long long newNum) - I made helper function to validate phone number. 
+ - I used "*this = copy;" in Contact::Contact(const Contact& copy) function. I can call copy operator.
+ - isEmpty() -  when I check the empty state, I used this function.
+ - *this = Contact(); - when I want to return code safety empty state, I can used default constructor.
+
+Quiz 5 Reflection
+2. under what circumstance do you need a deep copy?
+ - when we can't copy using shallow copy and when we want to copy independently, we need to use deep copy.
+
+4. why do overloaded I/O operators return the stream as their result?
+ - II/O operators allow cascading so it return the stream as their result.
