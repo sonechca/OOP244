@@ -1,0 +1,39 @@
+/***********************************************************
+ // OOP244 Workshop 9: Function Templates
+ // File: reflect.txt
+ // Date: July 29, 2019
+ // Author: Hong Huang
+ // Name: Mintae Kim
+ // Reason: Workshop 9 lab
+ // Student#: 141915181
+ // E-mail: mkim221@myseneca.ca
+ ***********************************************************/
+
+1. What happens if you try to put your templated functions in Data.cpp? Does your source code compile if you move all functions to Data.h? Explain.
+ - If you place the template in the Data.cpp file, you cannot load the function from the main function to the header file alone. Templates differ from 
+   general function declarations and definitions because they create the required type of function of the user. So I need to include Data.cpp and Data.h 
+   in the main function(w9_in_lab) if I want to work source code with putting the template into Data.cpp
+
+2. Move one templated function into ws9_lab.cpp. Does it work now? Do you need to define the template function above main(), before it is used, or 
+   can you define it below main()?
+ - Creating a template over the main function will work like creating it in a header file. However, since a function created by this template is required 
+   in the Data.cpp file, Data.cpp need #include w9_in_lab.cpp
+
+3. Could you have done this lab without templates, by just overloading your functions in Data.h to accept integer and double arguments? What is the 
+   advantage of using templates? 
+ - I tried to wrap up the workshop through the template, not by overloading the function. Templates have an advantage that is avoiding creating redundant 
+   functions of the same logic that have different types of parameter values. Through the benefits of this template, we can make the code more concise and
+   function through the template as needed.
+
+4. Are the following equivalent? 
+template<class T> 
+template<typename T>
+- Basically, the two methods of creating are equivalent. In the past, templates could only be created with "template <class T>", but as the compiler version 
+  went up, templates could also be created with <typename T>.
+
+Quiz 7 reflection
+ 3. Given the following line of code:
+	1. Person* ptr = new Student();
+  what is ptr's static type and dynamic type ?
+ - My answer was Static type was "Person* ptr", dynamic type was "new Student()"
+ - Correct answer is Static type is "Person*", dynamic type is "Student"
