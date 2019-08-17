@@ -1,0 +1,32 @@
+1) What is a safe empty state? Could you define a safe empty state that differs from the empty state that you defined?
+ - A safe empty state is that the user defines them to be empty variable. This allows us to use stable values that are 
+ always the same initialized whenever we use the object. This makes it easier for users to find empty variables that 
+ can be used because the variables are initialized empty without having a garbage value that makes the user hard to 
+ find an empty variable.
+
+2) Identify the parts of your source code where to minimized code duplication.
+ - I used the default constructor and 'this' keywords to minimize code duplication. For example I used *this = Passenger() 
+ in other overloading constructors. And I used isEmpty() function for checking whether Passenger object is in a safe empty 
+ state or not. So that I didn't need to type the if statement repeatedly in function both name() and display().
+
+3) The canTravelWith(...) member function accesses the private data of the object referenced in its parameter. 
+Explain why C++ allows this access.
+ - By passing the "Passenger" object that is the same class, as a reference parameter, we can access private data in class.
+ The private data does not constrain you from accessing those properties or functions from within the same class.
+
+4) What statement did you add to ensure that the strncpy(...) function exe-cutes correctly?
+ - I need to add the statement "#include <cstring>" to use "strncpy" function and I should specify the exact size of the
+ buffer that we want to copy correctly. And I added string terminator to set the last character of the array of string 
+ with a null terminator ('\0') in order to execute "strncpy" correctly.
+
+5) Explain what you have learned in this workshop.
+ - I have learn how to use “constructor” and “strncpy”. I found through the constructor that I could automatically
+ initialize the private variable value whenever an object was declared, and by overloading the constructor, I was able to
+ define a constructor with different parameters. I have learned that “strncpy” should be used instead of “strcpy” 
+ in order to have an exact value and how to use it. The most interesting studying was "this" keyword that prevented the code 
+ from duplicating and finally I could totally understand about “this” keyword 
+
+Quiz 3 Reflection
+ 4. When is a destructor invoked?
+  - when every normal member function has completed its executing, the destructor is invoked 
+  - I answered destructor clean up its member function after using object
