@@ -1,0 +1,26 @@
+// Workshop: Workshop 1
+// Name: Mintae Kim
+// Student #: 141915181
+// Course: OOP244 Summer 2019
+// E-mail: mkim221@myseneca.ca
+
+
+The purpose of using namespace is to prevent problem in a project where multiple people use the same identifier.
+We develop applications within the scope by specifying the scope of our own namespace for each of us to develop.
+The purpose of use of the header file can be saved by dividing the prototype of the function into a header file and 
+calling the header file from the main function. In this way, the desired function can be retrieved through the header
+file whenever necessary and the code of the main function can not be seen as complex, making it more code-readable.
+
+The header file contains only the declaration of the interface between the program's source file (.cpp) and .h. The source
+file(.cpp) will be a compilation and the header file will act as a bridge to connect with each other when compiles multiple 
+source files.
+
+The reason why a .cpp file does not need to be included in another .cpp file is that the .cpp file contains the implementation
+ of programs and functions. Therefore, it is sufficient to connect between main files through the header file, which refers to 
+the implementation file in question.
+
+Through this workshop, I learned how to use safeguard and namespace. When I used the namespace, I had difficulties. I was 
+not used to it yet, so it was difficult to make good use of it. And to use the namespace of the same name through a header
+file, we learned to enclose both prototypes and functions in the namespace, and it was also new to divide namespace of the 
+same name into one. As I have learned so far, I have many difficulties because there are many differencesfrom the C program. 
+I felt that I need more practice and study to keep up with the course.
