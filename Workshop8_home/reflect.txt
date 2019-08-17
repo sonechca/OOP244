@@ -1,0 +1,27 @@
+/***********************************************************
+ // OOP244 Workshop 8: virtual Functions and Abstract Base Classes
+ // File: reflect.txt
+ // Date: July 22, 2019
+ // Author: Hong Huang
+ // Name: Mintae Kim
+ // Reason: Workshop 8 home
+ // Student#: 141915181
+ // E-mail: mkim221@myseneca.ca
+ ***********************************************************/
+
+1. What is the difference between an abstract base class and a concrete class?
+- The Abstract Base Class contains at least one pure virtual function. it usually exists such as the 
+base class in a hierarchy and does not provide any implementation so we cannot make objects 
+of this class, while the concrete class derives from the abstract base class and give implementation 
+to pure virtual function.
+
+2. Identify the functions that shadow functions of the same name in your solution?
+- Account::credit(amount)
+- Account::debit(c_trans)
+
+3. Explain what have you learned in this workshop.
+- I have learned pure virtual function with abstract base class and by using allocator.cpp, I could 
+choose derived object through getting input such as ‘S’, ‘C’. 
+
+Quiz 6 reflect
+- I got full mark last quiz 10/10
