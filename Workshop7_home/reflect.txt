@@ -1,0 +1,42 @@
+/***********************************************************
+ // OOP244 Workshop 7: Derived Classes
+ // File: reflect.txt
+ // Date: July 15, 2019
+ // Author: Hong Huang
+ // Name: Mintae Kim
+ // Reason: Workshop 7 home
+ // Student#: 141915181
+ // E-mail: mkim221@myseneca.ca
+ ***********************************************************/
+
+1. Does the Hero class need to know about the existence of the SuperHero class? (Hint: search for "SuperHero" in Hero.cpp)
+- Because Hero class is a parent class and will not use SuperHero class, it doesn't need to know the inherited SuperHero class.
+
+2. Does the SuperHero class need to know about the existence of the Hero class? (Hint: search for "Hero" in SuperHero.cpp)
+ - The superhero class can be used by invoking the Hero's Data Member and Member functions because it inherited from Hero class 
+that is parents class. To do that, the superhero class needs to know the Hero class.
+
+3. The program prints out "Ancient Battle!" when two Heroes fight. It prints out "Super Fight!" when two SuperHeroes fight. When 
+you made a Hero fight a SuperHero, what did it print out?
+- It will print out the "Ancient Battle!". Because the * operator of the inherited superhero class has parameters that receive two 
+superhero objects. However, the * operator of Hero class which is parents class can receive objects from inherited superheroes as 
+parameters. so the program will use Hero's * operator.
+
+4. True or False: is the following definition for main valid? Explain.
+int main() {
+  Hero("Achilles", 20, 6) * Hero("Hector", 30, 5);
+}
+- True, both Hero's object create each hero object using constructor and * operator will work because both objects are satisfied 
+with the parameter conditions of the operator.
+
+5. True or False: is the following definition for main valid? Explain.
+int main() {
+ (Hero("Achilles", 20, 6) * Hero("Hector", 30, 5)) 
+                          *
+ (Hero("Atalanta", 10, 3) * Hero("Hippolyta", 10, 2));
+}
+- True, Because the * operator operates in parentheses and returns the Hero object as the result value, the code will activate 
+the * operator anew with the result value of two objects.
+
+QuizX reflect
+ - I didn't quiz 2 weeks ago
