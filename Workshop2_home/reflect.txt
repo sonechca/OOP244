@@ -1,0 +1,33 @@
+// Workshop: Workshop 2
+// Name: Mintae Kim
+// Student #: 141915181
+// Course: OOP244 Summer 2019
+// E-mail: mkim221@myseneca.ca
+
+1) Why do you have to allocate new dynamic memory when you increase the size of an existing array of dynamically allocated memory?
+
+- Dynamic memory is a method used to prevent waste of memory, which is allocated only to the size of memory allocated an initial 
+allocation. And, when dynamic memory is allocated, we cannot modify the size of the memory. In order to expand the size of memory,
+ we need to allocate new dynamic memory.
+
+2) The Kingdom structure stores the name of the kingdom in an array of characters. 
+At the end of the program, we do not use the delete operator to deallocate the memory occupied by the name itself. Why don¡¯t we 
+need to use the delete e operator on this array itself?
+
+- The name of the Kingdom arrangement is not allocated as a dynamic memory but as static memory. While dynamic memory can generate 
+memory issues such as memory leak without deallocation, static memory features do not need to be deallocated because static memory 
+is allocated at load time and can be used out of the scope of deployed variables.
+
+3) There are two display(...) function definitions. How does the compiler know which definition to call from your main function?
+
+- In C++, the compiler matches the type of function parameter with the same type of function called in the main function. Using 
+the name of the same function does not cause problems in calling the function if the parameters are different.
+
+4) Describe what have you have learned in this workshop.
+- Through this workshop, I learned about dynamic memory allocation and deallocation. Through dynamic memory, I learned that I can 
+use it efficiently without wasting memory. There was no difficulty in allocating dynamic memory, but there was difficulty in 
+increasing the size of memory and copying new memory from existing memory. In particular, I spent a lot of time copying array 
+elements, and I was able to learn that, in conclusion, I can make a code for copies very simple.
+
+Quiz 1 Reflection
+- I¡¯ve got full mark of this quiz (5 of 5).
