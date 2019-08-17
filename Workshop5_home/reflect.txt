@@ -1,0 +1,20 @@
+1. The operator+ returns a Fraction object. Explain why this operator should not return a reference to a Fraction object (like operator+=).
+- I specified a temporary object which is a local object in operator+ to avoiding changing original object data. this object would be terminated
+ after return temporary object. It will not work out of scope. Therefore, if we return a reference object to Fraction object, it will return a
+ reference which is already terminated value with the garbage value.
+
+2. List the temporary objects in the tester module
+ -(a+b).display()
+ -(b+d).display()
+
+3. List the simplifications that you made to your class to minimize
+ - I have used operator+ in my operator+= to minimize code so I could use just  *this = *this + rhs. 
+ - I have used isEmpty() function for checking that is safe-empty state or not, when I need to prove safe-empty state. 
+ - I have used gcdNum = gcd()) for dividing object member by the greatest common divisor in reduce() 
+  - I have used "*this =Fraction()" for making safe-empty state in constructor
+
+4. I have learned how to use various binary operator. By using different operators such as +, *, !=, ==, +=, I can overload the member function 
+     operators with different logic. And I used an operator within another operator so I could minimize my code. Also, I have learned why I need to use a temporary object.
+
+Quiz 4 reflection.
+-	I had full mark (5 of 5).
