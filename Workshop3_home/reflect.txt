@@ -1,0 +1,37 @@
+/***********************************************************
+ // OOP244 Workshop 3: Classes and Privacy
+ // File: reflect
+ // Date: Jun 3, 2019
+ // Author: Robert Robson
+ // Name: Mintae Kim
+ // Reason: Workshop 3 Home
+ // Student#: 141915181
+ // E-mail: mkim221@myseneca.ca
+ ***********************************************************/
+
+1) Explain what is the difference between a null string and an empty string?
+	- The null string does not have a value and the string exists in memory, but no elements are assigned. An empty string, 
+              on the other hand, is assigned an element that is an empty value such as '\0'. 
+
+2) Your class declares two member functions named set(...).  In C, this would generate an error.  Name the feature of C++ that allows this.
+	- The feature of C++ has function overloading. The C++ compiler can distinguish through the parameter list even though functions 
+               have same identifiers. Therefore, even if you declare multiple functions with the same name, invoking the function does not 
+               produce an error if the parameters are different.
+
+3) For the at-home portion you had to change the logic that validates a SIN. How would you design your class in such a way that if a new 
+   update to the validation logic is necessary, you don't have to change anything in the func-tion CRA_Account::set(...)?
+	- If I need to update a new validation logic without changing the function CRA_Account::set(...), I will be able to define a new overloading 
+              member function(set()) for updating validate SIN number in the class. then I will change the function CRA_Account::isEmpty() instead of 
+              the function CRA_Account::set(...). And CRA_Account::isEmpty() can get the value when the logic of both the new function and 
+              CRA_Account::set(...) is satisfied.
+
+4) What have you learned in completing this workshop?
+	- Through this workshop, I have learned how to use Class. I have studied that Private values in Class could only be dealt with through
+               the membership function. Through function overload, I have learned how to deal with the same name function separately through
+               parameter. The most difficult thing was to find the validate SIN number logic and I was finally able to make the code simple using 
+               'for' iteration. Lastly I have learned how to do formatting balance value using 'setf()' and 'precision()'when I print out. 
+
+Quiz 2 Reflection
+1. What are the tree classes of member functions for a structure?
+ 	- Queries , Modifiers, Special 
+	- I was confused 'privacy' , ' public'. I wrote privacy and public.
